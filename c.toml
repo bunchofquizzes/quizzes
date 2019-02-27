@@ -1,0 +1,38 @@
+[[questions]]
+    text = """Predict the output of the program given below."""
+    code = """
+#include<stdio.h>
+int main()
+{
+   int n;
+   for(n = 7; n!=0; n--)
+     printf("n = %d", n--);
+   getchar();
+   return 0;
+}"""
+    positive = 10
+    negative = 5
+    repl = ""
+    source = "https://www.geeksforgeeks.org/output-of-a-program-set-1/"
+
+    [[questions.options]]
+        text = """It is an infinite loop"""
+        correct = true
+
+    [[questions.options]]
+        code = """7
+6
+5
+4
+3
+2
+1"""
+
+    [[questions.options]]
+        code = """7
+5
+3
+1"""
+
+    [[questions.options]]
+        text = """None of the above"""
