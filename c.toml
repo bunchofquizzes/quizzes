@@ -7,7 +7,6 @@ int main() {
     for(n = 7; n != 0; n--) {
         printf("%d", n--);
     }
-    getchar();
     return 0;
 }"""
     positive = 2
@@ -27,3 +26,64 @@ int main() {
 
     [[questions.options]]
         text = """None of the above"""
+
+
+[[questions]]
+    text = """Predict the output of the program given below"""
+    code = """
+#include<stdio.h>
+int main()
+{
+   printf("%x", -1<<1);
+   return 0;
+}"""
+    positive = 2
+    negative = 1
+    repl = ""
+    source = "https://www.geeksforgeeks.org/output-of-a-program-set-1/"
+
+    [[questions.options]]
+        code = """FFFFFFFF"""
+
+    [[questions.options]]
+        code = """1FFFFFFF"""
+
+    [[questions.options]]
+        code = """FFFFFFFE"""
+        correct = true
+
+    [[questions.options]]
+        code = """1FFFFFFE"""
+
+
+[[questions]]
+    text = """Predict the output of the program given below"""
+    code = """
+char *getString()
+{
+   char *str = "test";
+   return str;
+}
+
+int main()
+{
+   printf("%s\n", getString());
+   return 0;
+}"""
+    positive = 2
+    negative = 1
+    repl = ""
+    source = "https://www.geeksforgeeks.org/output-of-a-program-set-1/"
+
+    [[questions.options]]
+        code = """<empty>"""
+
+    [[questions.options]]
+        code = """test"""
+        correct = true
+
+    [[questions.options]]
+        code = """Syntax Error"""
+
+    [[questions.options]]
+        code = """None of the above"""
