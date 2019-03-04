@@ -67,7 +67,7 @@ char *getString()
 
 int main()
 {
-   printf("%s\n", getString());
+   printf("%s\\n", getString());
    return 0;
 }"""
     positive = 2
